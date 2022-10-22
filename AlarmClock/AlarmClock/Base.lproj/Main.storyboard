@@ -75,7 +75,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="85" id="DJ7-oh-WeJ"/>
                                                 </constraints>
-                                                <color key="textColor" red="0.52730734619999997" green="0.22595440859999999" blue="0.89062051669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -101,8 +101,8 @@
                                                 </connections>
                                             </datePicker>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4y-WS-cdb">
-                                                <rect key="frame" x="100.5" y="232" width="119" height="10"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="20"/>
+                                                <rect key="frame" x="99.5" y="232" width="121" height="10"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Set this time">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,7 +129,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="180" id="V6H-Ve-cL0"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -142,15 +142,14 @@
                                             </switch>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuo-VI-5eS">
                                                 <rect key="frame" x="241" y="0.0" width="80" height="31"/>
-                                                <color key="backgroundColor" red="0.69160888042936719" green="0.65423779396545478" blue="0.88362223831648679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.65946422490000001" green="0.62465597429999997" blue="0.83586726239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="d4c-xg-Vqf"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Clear">
-                                                    <fontDescription key="titleFontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="20"/>
-                                                </buttonConfiguration>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Clear"/>
                                                 <connections>
                                                     <action selector="clickOnClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbt-JY-UlI"/>
                                                 </connections>

@@ -7,20 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var volumeValue: UIProgressView!
-    @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var textFieldVolume: UITextField!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var timeButton: UIButton!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var switchClear: UISwitch!
-    @IBOutlet weak var clearButton: UIButton!
+final class ViewController: UIViewController {
+    
+    @IBOutlet private weak var volumeValue: UIProgressView!
+    @IBOutlet private weak var slider: UISlider!
+    @IBOutlet private weak var textFieldVolume: UITextField!
+    @IBOutlet private weak var datePicker: UIDatePicker!
+    @IBOutlet private weak var timeButton: UIButton!
+    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet private weak var switchClear: UISwitch!
+    @IBOutlet private weak var clearButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
     
     
@@ -45,5 +46,18 @@ class ViewController: UIViewController {
     
     @IBAction func clickOnClear(_ sender: UIButton) {
     }
+    
+    private func setupUI() {
+        datePicker.locale = Locale.current
+        timeLabel.text = ""
+        textFieldVolume.text = "0.5"
+        
+        textFieldVolume.layer.masksToBounds = true
+        textFieldVolume.layer.cornerRadius = textFieldVolume.frame.size.height / 2
+        
+        timeLabel.layer.masksToBounds = true
+        timeLabel.layer.cornerRadius = timeLabel.frame.size.height / 2
+        
+        clearButton.layer.cornerRadius = clearButton.frame.size.height / 2
+    }
 }
-
