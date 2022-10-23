@@ -135,7 +135,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aMx-MA-3Di">
                                                 <rect key="frame" x="186" y="0.0" width="51" height="31"/>
-                                                <color key="onTintColor" red="0.52730734619999997" green="0.22595440859999999" blue="0.89062051669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="onTintColor" red="0.62669757500000001" green="0.51840565900000002" blue="0.80244437940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="switchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="dJM-7I-p8z"/>
                                                 </connections>

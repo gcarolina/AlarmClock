@@ -49,22 +49,35 @@ final class ViewController: UIViewController {
     
     
     @IBAction func dateAction(_ sender: UIDatePicker) {
+        //print(sender.date)
     }
     
     
     @IBAction func clickOnSetTime(_ sender: UIButton) {
+        let dateFormatter = DateFormatter()
+        datePicker.datePickerMode = .time
+
+        dateFormatter.dateFormat = "HH:mm"
+        timeLabel.text = dateFormatter.string(from: datePicker.date)
     }
     
-    
     @IBAction func switchAction(_ sender: UISwitch) {
+        if sender.isOn {
+            timeLabel.backgroundColor = .systemPurple
+        } else {
+            timeLabel.backgroundColor = .init(red: 168, green: 159, blue: 213)
+        }
     }
     
     
     @IBAction func clickOnClear(_ sender: UIButton) {
+        timeLabel.text = ""
+        switchClear.isOn = false
+        timeLabel.backgroundColor = .init(red: 168, green: 159, blue: 213)
     }
     
     private func setupUI() {
-        datePicker.locale = Locale.current
+        datePicker.locale = Locale(identifier: "ru_RU")
         timeLabel.text = ""
         textFieldVolume.text = String(0.5)
         
@@ -94,4 +107,12 @@ extension ViewController {
     }
 }
 
-
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+}
