@@ -25,10 +25,26 @@ final class ViewController: UIViewController {
     }
     
     
-    @IBAction func sliderAction(_ sender: UISlider) {
+    @IBAction func textFieldAction(_ sender: UITextField) {
+
+        guard let inputNumber = sender.text, !inputNumber.isEmpty else {
+            showAlert(title: "Wrong format!", message: "Please enter the value")
+            print("Wrong format")
+            return
+        }
+        
+        if let actualNumber = Float(inputNumber), actualNumber >= 0 && actualNumber <= 1 {
+            slider.value = Float(inputNumber) ?? 0
+            volumeValue.progress = Float(inputNumber) ?? 0
+        } else {
+            showAlert(title: "Wrong format!", message: "Please enter a value from 0 to 1")
+        }
     }
     
-    @IBAction func volumeValueAction(_ sender: UITextField) {
+    
+    @IBAction func sliderAction(_ sender: UISlider) {
+        textFieldVolume.text =  String(sender.value)
+        volumeValue.progress = Float(String(sender.value)) ?? 0
     }
     
     
@@ -50,7 +66,7 @@ final class ViewController: UIViewController {
     private func setupUI() {
         datePicker.locale = Locale.current
         timeLabel.text = ""
-        textFieldVolume.text = "0.5"
+        textFieldVolume.text = String(0.5)
         
         textFieldVolume.layer.masksToBounds = true
         textFieldVolume.layer.cornerRadius = textFieldVolume.frame.size.height / 2
@@ -61,3 +77,21 @@ final class ViewController: UIViewController {
         clearButton.layer.cornerRadius = clearButton.frame.size.height / 2
     }
 }
+
+
+extension ViewController {
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.textFieldVolume.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
+
+
