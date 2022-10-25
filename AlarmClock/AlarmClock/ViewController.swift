@@ -43,7 +43,8 @@ final class ViewController: UIViewController {
     
     
     @IBAction func sliderAction(_ sender: UISlider) {
-        textFieldVolume.text =  String(sender.value)
+        let shortValue = round(Float(sender.value) * 10) / 10
+        textFieldVolume.text =  String(shortValue)
         volumeValue.progress = Float(String(sender.value)) ?? 0
     }
     
